@@ -56,3 +56,24 @@ h1 {
 	top: 55px;
 	right: 35px;	
 }
+.produto-tabela {
+	width: 99% !important;
+}
+.produto-tabela input{
+	width: 99% !important;
+}
+
+/* Customiza tabView início*/
+.ui-tabs .ui-tabs-panel {
+	padding: 0.5em 0.2em !important;
+}
+.ui-tabs {
+	padding: 0px !important;
+}
+.ui-tabs .ui-tabs-nav {
+	margin: -4px !important;
+}
+.ui-tabs .ui-tabs-top > .ui-tabs-nav {
+	padding: 0px !important;
+}
+/* Customiza tabView fim */
