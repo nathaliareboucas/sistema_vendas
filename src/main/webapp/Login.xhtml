@@ -1,13 +1,18 @@
-<ui:composition template="/WEB-INF/template/LayoutPadrao.xhtml"
-	xmlns="http://www.w3.org/1999/xhtml"
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 		
-	<ui:define name="corpo">
-	
-		<h:body>
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Login</title>
+		<h:outputStylesheet library="css" name="sistema.css"/>
+	</h:head>
+
+	<h:body>
 		<div id="login-dialog">
 			<h1>Login</h1>
 			
@@ -20,10 +25,10 @@
 					<p:password size="30"/>
 					
 					<h:panelGroup/>
-					<p:commandButton value="Login"/>
+					<p:commandButton value="Login"/>				
 				</h:panelGrid>
 			</h:form>
 		</div>
+
 	</h:body>
-	</ui:define>
-</ui:composition>
+</html>
