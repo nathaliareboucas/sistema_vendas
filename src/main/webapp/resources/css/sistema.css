@@ -77,3 +77,19 @@ h1 {
 	padding: 0px !important;
 }
 /* Customiza tabView fim */
+
+/* Customiza menu início*/
+.menu-sistema {
+	border: 0px !important;
+	padding: 0px !important;
+	background: none !important;
+   	margin-top: 20px !important;
+}
+
+.menu-sistema .ui-menu-parent >  a .ui-menuitem-text, .menu-sistema > .ui-menu-list > .ui-menuitem > a {
+	color: #ffffff;
+}
+.menu-sistema .ui-icon-triangle-1-s {
+	background: url(#{resource['images:seta-para-baixo.png']}) no-repeat;
+}
+/* menu sistema fim */
