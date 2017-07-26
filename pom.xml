@@ -26,9 +26,12 @@
 			<version>6.0</version>
 		</dependency>
 
-		<!-- WELD -->
-		<!-- <dependency> <groupId>org.jboss.weld.servlet</groupId> <artifactId>weld-servlet</artifactId> 
-			<version>1.1.10.Final</version> </dependency> -->
+		<!-- WELD (Implementação do CDI) -->
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>1.1.10.Final</version>
+		</dependency>
 
 		<!-- Hibernate -->
 		<dependency>
