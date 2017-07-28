@@ -1,6 +1,6 @@
 package nathaliareboucas.com.github.sistema_vendas.model;
 
-public enum TipoPessoa {
+public enum StatusPedido {
 
-	FISICA, JURIDICA
+	ORCAMENTO, EMITIDO, CANCELADO
 }
