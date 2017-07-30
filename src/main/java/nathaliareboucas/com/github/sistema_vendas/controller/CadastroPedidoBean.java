@@ -1,20 +1,28 @@
 package nathaliareboucas.com.github.sistema_vendas.controller;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
+import javax.inject.Named;
 
+import nathaliareboucas.com.github.sistema_vendas.model.EnderecoEntrega;
+import nathaliareboucas.com.github.sistema_vendas.model.Pedido;
 import nathaliareboucas.com.github.sistema_vendas.service.NegocioException;
 
-@ManagedBean
-@RequestScoped
-public class CadastroPedidoBean {
+@Named
+@ViewScoped
+public class CadastroPedidoBean implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private List<Integer> itens;
+	private Pedido pedido;
 
 	public CadastroPedidoBean() {
+		pedido = new Pedido();
+		pedido.setEnderecoEntrega(new EnderecoEntrega());
 		itens = new ArrayList<>();
 		itens.add(1);
 	}
@@ -25,6 +33,10 @@ public class CadastroPedidoBean {
 
 	public List<Integer> getItens() {
 		return itens;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
 	}
 
 }
