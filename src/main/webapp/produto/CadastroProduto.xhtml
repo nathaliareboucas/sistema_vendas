@@ -8,10 +8,15 @@
 	<ui:define name="titulo">Novo Produto</ui:define>
 	
 	<ui:define name="corpo">
+		<f:metadata>
+			<f:param name="dummy"/>
+			<f:event listener="#{cadastroProdutoBean.inicializar}" type="preRenderView" />
+		</f:metadata>		
+	
 		<h:form>
 			<h1>Novo Produto</h1>
 			
-			<p:messages autoUpdate="true" closable="true"/>
+			<p:messages autoUpdate="true" />
 			
 			<p:toolbar style="margin-top: 20px">
 				<p:toolbarGroup>
@@ -35,8 +40,10 @@
 					value="#{cadastroProdutoBean.produto.nome}"/>
 				
 				<p:outputLabel value="Categoria" for="categoria"/>
-				<p:selectOneMenu id="categoria">
-					<f:selectItem itemLabel="Selecione a categoria"/>
+				<p:selectOneMenu id="categoria" value="#{cadastroProdutoBean.categoriaPai}">
+					<f:selectItem itemLabel="Selecione a categoria" noSelectionOption="true"/>					
+					<f:selectItems value="#{cadastroProdutoBean.categoriasRaizes}" var="categoria"
+						itemValue="#{categoria}" itemLabel="#{categoria.descricao}"/> 
 				</p:selectOneMenu>
 				
 				<p:outputLabel value="Subcategoria" for="subCategoria"/>
