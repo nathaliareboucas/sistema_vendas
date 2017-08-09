@@ -4,7 +4,6 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
-import javax.inject.Inject;
 
 import nathaliareboucas.com.github.sistema_vendas.model.Categoria;
 import nathaliareboucas.com.github.sistema_vendas.repository.Categorias;
@@ -13,7 +12,7 @@ import nathaliareboucas.com.github.sistema_vendas.util.cdi.CDIServiceLocator;
 @FacesConverter(forClass = Categoria.class)
 public class CategoriaConverter implements Converter<Categoria> {
 
-	 @Inject
+//	 @Inject
 	private Categorias categorias;
 
 	public CategoriaConverter() {
